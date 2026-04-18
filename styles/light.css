@@ -1,63 +1,57 @@
 :root.theme-light {
-  --bg-image: url(../images/cover-image-light.png);
-  --bg-color: #FFF1F7;
-  --title-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --text-color: #353430;
-  --text-content-color: #353430;
-  --border: 1px solid var(--text-color);
-  --border-hover: 1px solid rgba(53, 52, 48, 0.5);
-
+    --bg-image: url(../images/cover-image-light.png);
+    --bg-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
+    --text-content-color: #353430;
+    --border: 1px solid var(--text-color);
+    --border-hover: 1px solid rgba(53, 52, 48, 0.5);
 }
 .theme-light .header__rec {
-  display: none;
+    display: none;
 }
 
 .theme-light .header__theme-menu-button {
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
-.theme-light .header__theme-menu-button_type_light{
-  border: var(--border);
+.theme-light .header__theme-menu-button_type_light {
+    border: var(--border);
 }
 
-.theme-light .header__theme-menu-button_type_dark{
-  border: none;
+.theme-light .header__theme-menu-button_type_dark {
+    border: none;
 }
 
-.theme-light .header__theme-menu-button:hover{
-  border: var(--border-hover);
-  color: var(--text-color);
+.theme-light .header__theme-menu-button:hover {
+    border: var(--border-hover);
+    color: var(--text-color);
 }
 
-.theme-light .header__theme-menu-button:focus  {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid var(--text-color);
+.theme-light .header__theme-menu-button:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
 }
 
 .theme-light .section__title {
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
 .theme-light .title__advice {
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
-
-
 @media (prefers-color-scheme: light) {
-  :root {
-  --bg-image: url(../images/cover-image-light.png);
-  --bg-color: #FFF1F7;
-  --title-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --text-color: #353430;
-  --text-content-color: #353430;
-  --border: 1px solid var(--text-color); 
-  --border-hover: 1px solid rgba(53, 52, 48, 0.5);
- }
-
-
-
+    :root {
+        --bg-image: url(../images/cover-image-light.png);
+        --bg-color: #fff1f7;
+        --title-color: #ffc2e6;
+        --accent-color: #ff8dcb;
+        --text-color: #353430;
+        --text-content-color: #353430;
+        --border: 1px solid var(--text-color);
+        --border-hover: 1px solid rgba(53, 52, 48, 0.5);
+    }
 }

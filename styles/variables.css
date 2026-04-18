@@ -3,8 +3,6 @@
   и их переопределение под различные устройства
 */
 :root {
-  
-  
   --bg-color: #000028;
   --main-font: 'IBM Plex Mono', sans-serif;
   --font-size: 18px;
@@ -14,5 +12,4 @@
   --text-content-color: #F1B2CE;
   --border: 1px solid var(--accent-color);
   --border-hover: 1px solid rgba(255, 0, 112, 0.5);
-
 }

@@ -10,14 +10,12 @@
     width: 100%;
     min-height: 100vh;
     background-attachment: fixed;
-    overflow-x: hidden;
 }
 
 .header {
     background-image: var(--bg-image);
     height: 100vh;
     min-height: 668px;
-    max-width: 375px;
     margin: 0 auto;
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
@@ -73,29 +71,32 @@
     box-shadow: 0 0 6px 2px var(--accent-color);
 }
 
+
+
 .header__theme-menu {
     justify-self: end;
     margin-top: 65px;
-    color: var(--accent-color);
+
 }
 
 .header__theme-menu-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
 }
+
 
 .header__theme-menu-button {
     font-size: 18px;
-    color: var(--accent-color);
+    color: var(--button-color);
     background: none;
     border: none;
     text-transform: lowercase;
-    letter-spacing: 2px;
 }
 
 .header__theme-menu-button_active {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--button-border-color);
     pointer-events: none;
 }
 
@@ -106,7 +107,7 @@
 .header__theme-menu-button:focus {
     outline: none;
     border: none;
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--button-border-color);
 }
 
 .header__theme-menu-button_type_dark {
@@ -136,13 +137,10 @@
     line-height: 1.3;
     box-sizing: border-box;
     overflow-wrap: break-word;
-    width: 355px;
-    height: 117px;
+    max-width: 355px;
 }
 
 .section {
-    min-height: 668px;
-    max-width: 375px;
     margin: 0 auto;
     display: grid;
     gap: 50px;
@@ -150,16 +148,14 @@
     margin-bottom: 40px;
 }
 
-.section__why,
-.section__what,
-.section__how,
+.content-section,
 .gallery {
     display: grid;
     padding: 0 10px 0 10px;
 }
 
 .section__title {
-    color: var(--accent-color);
+    color: var(--h2-color);
     font-weight: bold;
     line-height: 1.3;
     width: 355px;
@@ -177,7 +173,6 @@
 }
 
 .card {
-    max-width: 375px;
     margin: 0 auto;
     display: grid;
     gap: 10px;
@@ -187,25 +182,19 @@
     color: var(--text-color);
     background-color: var(--accent-color);
     font-weight: bold;
+    font-size: var(--font-size);
 }
 
 .text {
     color: var(--text-content-color);
 }
 
-.section__why {
-    min-height: 949px;
+
+.content-section {
     gap: 20px;
 }
 
-.section__what {
-    min-height: 1119px;
-    gap: 20px;
-}
 
-.section__how {
-    min-height: 1737px;
-}
 
 a {
     text-shadow: 1px 1px 0 var(--accent-color);
@@ -213,28 +202,21 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid var(--accent-color);
 }
 
 a:focus {
     outline: 1px solid var(--text-color);
 }
 
-.title__advice {
-    color: var(--bg-color);
-    background-color: var(--accent-color);
-}
 
-.gallery {
-    min-height: 1400px;
-}
+
 
 .gallery__menu {
     display: grid;
     grid-column: auto;
     gap: 10px;
     margin-top: 10px;
-    min-height: 1366px;
 }
 
 .gallery__item {
@@ -250,7 +232,6 @@ a:focus {
 .footer {
     height: 100vh;
     min-height: 668px;
-    max-width: 375px;
     margin: 0 auto;
     margin-top: 40px;
     display: flex;
@@ -262,14 +243,15 @@ a:focus {
     color: var(--title-color);
     font-family: var(--main-font);
     font-weight: 700;
-    font-size: 6.7em;
+    font-size: clamp(116px, 5.8vw, 157px);
     text-shadow: 4px 4px 0 var(--accent-color);
 }
+
+
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .header {
         min-height: 1024px;
-        max-width: 768px;
         padding: 0;
         padding-right: 20px;
     }
@@ -281,8 +263,8 @@ a:focus {
     }
 
     .header__rec {
-    right: 28px;
-    top: 20px;
+        right: 28px;
+        top: 20px;
     }
 
     .header__top {
@@ -299,27 +281,22 @@ a:focus {
     }
 
     .section {
-        max-width: 768px;
         margin-top: 60px;
         margin-bottom: 60px;
         gap: 80px;
     }
 
-    .section__why,
-    .section__what,
-    .section__how,
+    .content-section,
     .gallery {
-        max-width: 768px;
         padding: 0;
         margin: 0 20px 0 20px;
     }
 
-    .section__why {
+    .content-section {
         display: grid;
         gap: 20px;
         grid-template-columns: 32% minmax(min-content, 472px);
 
-        min-height: 648px;
     }
 
     .section__title {
@@ -330,13 +307,6 @@ a:focus {
         width: 100%;
     }
 
-    .title__text {
-        max-height: 23px;
-    }
-
-    .section__what {
-        min-height: 675px;
-    }
 
     .all_card_what {
         display: flex;
@@ -344,26 +314,19 @@ a:focus {
         flex-wrap: wrap;
     }
 
-    .card {
-        max-width: 768px;
-    }
 
-    .section__how {
+    .content-section {
         grid-template-columns: 32% minmax(min-content, 472px);
         gap: 20px;
-        min-height: 1296px;
     }
 
     .gallery {
-        min-height: 823px;
         gap: 20px;
-
-        max-width: 768px;
     }
 
     .gallery__menu {
         display: grid;
-        min-height: 780px;
+
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "sunset sunset ice-cream"
@@ -375,15 +338,19 @@ a:focus {
     .gallery__menu .gallery__item:nth-child(1) {
         grid-area: sunset;
     }
+
     .gallery__menu .gallery__item:nth-child(2) {
         grid-area: ice-cream;
     }
+
     .gallery__menu .gallery__item:nth-child(3) {
         grid-area: tape;
     }
+
     .gallery__menu .gallery__item:nth-child(4) {
         grid-area: books;
     }
+
     .gallery__menu .gallery__item:nth-child(5) {
         grid-area: street;
     }
@@ -396,7 +363,6 @@ a:focus {
     }
 
     .footer {
-        max-width: 768px;
         height: 100vh;
         min-height: 1024px;
     }
@@ -407,14 +373,11 @@ a:focus {
         max-width: 1024px;
         height: 100vh;
         min-height: 768px;
-        display: grid;
-        grid-template-rows: 1fr min-content 1fr;
         padding: 20px 20px 20px 0;
     }
 
     .decorated-zone::before,
     .decorated-zone::after {
-        content: "";
         margin: 20px;
     }
 
@@ -440,48 +403,44 @@ a:focus {
     .header__text {
         justify-self: end;
         min-width: 50%;
-        height: 71px;
         padding: 0;
     }
 
     .section {
         max-width: 1024px;
         margin-top: 60px;
-        margin-bottom: 60x;
+        margin-bottom: 60px;
         gap: 80px;
     }
 
-    .section__why,
-    .section__what,
-    .section__how,
+    .content-section,
     .gallery {
-        max-width: 1024px;
-        min-height: 768px;
         padding: 0;
         margin: 0 20px 0 20px;
     }
 
-    .section__why {
+    .content-section {
         grid-template-columns: 32% minmax(min-content, 649px);
-
         max-width: 1024px;
-        min-height: 508px;
         gap: 20px;
     }
-    .section__what {
-        max-width: 1024px;
-        min-height: 498px;
+
+    .content-section-what {
+        display: flex;
+        flex-direction: column;
     }
+
+
+    .text {
+        align-self: start;
+        margin-top: 10px;
+    }
+
 
     .section__title {
         max-width: 315px;
     }
-    .section__how {
-        grid-template-columns: 32% minmax(min-content, 649px);
-        max-width: 1024px;
-        min-height: 1015px;
-        gap: 20px;
-    }
+
 
     .all_card {
         display: grid;
@@ -489,8 +448,8 @@ a:focus {
     }
 
     .all_card_what {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-direction: row;
         gap: 10px;
     }
 
@@ -501,7 +460,6 @@ a:focus {
 
     .title__text {
         max-width: 100%;
-        max-height: 23px;
         margin: 0;
     }
 
@@ -513,7 +471,6 @@ a:focus {
 
     .gallery__menu {
         display: grid;
-        min-height: 1048px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "sunset sunset ice-cream"
@@ -525,15 +482,19 @@ a:focus {
     .gallery__menu .gallery__item:nth-child(1) {
         grid-area: sunset;
     }
+
     .gallery__menu .gallery__item:nth-child(2) {
         grid-area: ice-cream;
     }
+
     .gallery__menu .gallery__item:nth-child(3) {
         grid-area: tape;
     }
+
     .gallery__menu .gallery__item:nth-child(4) {
         grid-area: books;
     }
+
     .gallery__menu .gallery__item:nth-child(5) {
         grid-area: street;
     }
@@ -554,5 +515,19 @@ a:focus {
 
     .footer__title {
         font-size: 8em;
+    }
+}
+
+
+
+@media (prefers-color-scheme: light) {
+    .theme-auto .header__rec {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .theme-auto .header__rec {
+        display: block;
     }
 }

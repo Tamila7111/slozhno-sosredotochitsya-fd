@@ -145,7 +145,7 @@
 .section {
     margin: 0 auto;
     display: grid;
-    gap: 63px;
+    gap: 54px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -154,6 +154,15 @@
 .gallery {
     display: grid;
     padding: 0 10px 0 10px;
+    gap: 19px;
+}
+
+.content-section {
+    gap: 19px;
+}
+
+.gallery {
+    gap: 0;
 }
 
 .section__title {
@@ -166,7 +175,7 @@
 
 .all_card {
     display: grid;
-    gap: 20px;
+    gap: 22px;
 }
 
 .all_card_what {
@@ -177,7 +186,7 @@
 .card {
     margin: 0 auto;
     display: grid;
-    gap: 10px;
+    gap: 11px;
 }
 
 .title__text {
@@ -195,10 +204,6 @@
     color: var(--text-content-color);
 }
 
-
-.content-section {
-    gap: 20px;
-}
 
 
 

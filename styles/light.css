@@ -13,7 +13,6 @@
 }
 
 @media (prefers-color-scheme: light) {
-
     :root.theme-auto {
         --bg-image: url(../images/cover-image-light.png);
         --bg-color: #fff1f7;
@@ -26,11 +25,9 @@
         --button-border-color: #353430;
         --border: 1px solid var(--text-color);
         --border-hover: 1px solid rgba(53, 52, 48, 0.5);
-
     }
 
     .theme-light .header__rec {
         display: none;
     }
-
 }

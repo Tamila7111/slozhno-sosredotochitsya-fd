@@ -1,13 +1,13 @@
 :root.theme-dark {
     --bg-image: url(../images/cover-image-dark.png);
     --bg-color: #000028;
-    --title-color: #DB00FF;
-    --h2-color: #FF0070;
-    --accent-color: #FF0070;
+    --title-color: #db00ff;
+    --h2-color: #ff0070;
+    --accent-color: #ff0070;
     --text-color: #000028;
-    --text-content-color: #F1B2CE;
-    --button-color: #FF0070;
-    --button-border-color: #FF0070;
+    --text-content-color: #f1b2ce;
+    --button-color: #ff0070;
+    --button-border-color: #ff0070;
     --border: 1px solid var(--accent-color);
     --border-hover: 1px solid rgba(255, 0, 112, 0.5);
 }

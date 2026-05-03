@@ -75,14 +75,16 @@
 
 .header__theme-menu {
     justify-self: end;
-    margin-top: 65px;
-
+    margin-top: 70px;
+    min-height: 26px;
+    min-width: 70px;
 }
 
 .header__theme-menu-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-self: center;
+    gap: 12px;
 
 }
 
@@ -131,7 +133,7 @@
     justify-content: center;
     background-color: var(--accent-color);
     color: var(--text-color);
-    font-weight: bold;
+    font-weight: 700;
     margin-block-end: 10px;
     padding-right: 20px;
     line-height: 1.3;
@@ -143,7 +145,7 @@
 .section {
     margin: 0 auto;
     display: grid;
-    gap: 50px;
+    gap: 60px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -181,8 +183,12 @@
 .title__text {
     color: var(--text-color);
     background-color: var(--accent-color);
-    font-weight: bold;
+    font-weight: 700;
     font-size: var(--font-size);
+}
+
+.advice {
+    font-weight: 400;
 }
 
 .text {
@@ -251,7 +257,6 @@ a:focus {
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .header {
-        min-height: 1024px;
         padding: 0;
         padding-right: 20px;
     }
@@ -283,7 +288,7 @@ a:focus {
     .section {
         margin-top: 60px;
         margin-bottom: 60px;
-        gap: 80px;
+        gap: 85px;
     }
 
     .content-section,
@@ -299,12 +304,23 @@ a:focus {
 
     }
 
+        .content-section-what {
+        display: flex;
+        flex-direction: column;
+    }
+
     .section__title {
         width: 236px;
     }
 
+    .title__text{
+        line-height: 23px;
+        width: 100%;
+    }
+
     .all_card {
         width: 100%;
+        gap: 22px;
     }
 
 
@@ -312,20 +328,17 @@ a:focus {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+
     }
 
-
-    .content-section {
-        grid-template-columns: 32% minmax(min-content, 472px);
-        gap: 20px;
-    }
 
     .gallery {
-        gap: 20px;
+        gap: 18px;
     }
 
     .gallery__menu {
         display: grid;
+        gap: 8px;
 
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
@@ -372,7 +385,6 @@ a:focus {
     .header {
         max-width: 1024px;
         height: 100vh;
-        min-height: 768px;
         padding: 20px 20px 20px 0;
     }
 
@@ -389,11 +401,14 @@ a:focus {
     .header__theme-menu {
         justify-self: center;
         margin: 0;
+        
     }
 
     .header__theme-menu-list {
         display: flex;
         flex-direction: row;
+        gap: 25px;
+        padding-left: 5px;
     }
 
     .header__title {
@@ -420,14 +435,15 @@ a:focus {
     }
 
     .content-section {
-        grid-template-columns: 32% minmax(min-content, 649px);
+        grid-template-columns: 31% minmax(min-content, 648px);
         max-width: 1024px;
-        gap: 20px;
+        gap: 27px;
     }
 
     .content-section-what {
         display: flex;
         flex-direction: column;
+
     }
 
 
@@ -443,19 +459,24 @@ a:focus {
 
 
     .all_card {
+                align-self: start;
         display: grid;
-        gap: 10px;
+        gap: 20px;
     }
 
     .all_card_what {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+
+        
     }
 
     .card {
+        display: block;
         max-width: 100%;
-        gap: 10px;
+        gap: 7px;
     }
 
     .title__text {
@@ -465,12 +486,12 @@ a:focus {
 
     .gallery {
         max-width: 1024px;
-        min-height: 1091px;
-        gap: 20px;
+        gap: 15px;
     }
 
     .gallery__menu {
         display: grid;
+        gap: 20px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "sunset sunset ice-cream"
@@ -514,7 +535,7 @@ a:focus {
     }
 
     .footer__title {
-        font-size: 8em;
+        font-size: 9em;
     }
 }
 

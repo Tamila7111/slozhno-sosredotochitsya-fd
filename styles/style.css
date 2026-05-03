@@ -145,7 +145,7 @@
 .section {
     margin: 0 auto;
     display: grid;
-    gap: 60px;
+    gap: 63px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -237,13 +237,13 @@ a:focus {
 
 .footer {
     height: 100vh;
-    min-height: 668px;
+    min-block-size: 668px;
     margin: 0 auto;
     margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0;
+    
 }
 
 .footer__title {

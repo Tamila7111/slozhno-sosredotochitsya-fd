@@ -12,11 +12,3 @@
     --border-hover: 1px solid rgba(255, 0, 112, 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
-    .theme-light .header__rec {
-        display: none;
-    }
-}
-
-
-

@@ -1,4 +1,7 @@
 :root.theme-light {
+    .header__rec {
+        display: none;
+    }
     --bg-image: url(../images/cover-image-light.png);
     --bg-color: #fff1f7;
     --title-color: #ffc2e6;
@@ -27,13 +30,8 @@
         --border-hover: 1px solid rgba(53, 52, 48, 0.5);
     }
 
-    .theme-auto .header__rec,
-    .theme-light .header__rec {
+    .theme-auto .header__rec {
         display: none;
-    }
-
-    .theme-dark .header__rec {
-        display: block;
     }
     }
 

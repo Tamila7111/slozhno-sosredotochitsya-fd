@@ -13,12 +13,13 @@
 }
 
 /* Остальные стили, только при необходимости */
-.theme-dark .theme-auto .header__rec {
-    display: block;
-}
+
 
 @media (prefers-color-scheme: dark) {
     .theme-light .header__rec {
         display: none;
     }
 }
+
+
+

@@ -1,557 +1,540 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-    /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+/* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
-    background-color: var(--bg-color);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100vh;
-    background-attachment: fixed;
+background-color: var(--bg-color);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+width: 100%;
+min-height: 100vh;
+background-attachment: fixed;
 }
 
 .header {
-    background-image: var(--bg-image);
-    height: 100vh;
-    min-height: 668px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-rows: 1fr min-content 1fr;
-    padding-left: 10px;
-    padding-right: 10px;
+background-image: var(--bg-image);
+height: 100vh;
+min-height: 668px;
+margin: 0 auto;
+display: grid;
+grid-template-rows: 1fr min-content 1fr;
+padding-left: 10px;
+padding-right: 10px;
 }
 
 .decorated-zone {
-    position: relative;
+position: relative;
 }
 
 .decorated-zone::before,
 .decorated-zone::after {
-    content: "";
-    position: absolute;
-    width: 23px;
-    height: 23px;
-    border: var(--border);
-    box-sizing: border-box;
-    margin: 10px;
+content: "";
+position: absolute;
+width: 23px;
+height: 23px;
+border: var(--border);
+box-sizing: border-box;
+margin: 10px;
 }
 
 .decorated-zone::before {
-    top: 0;
-    right: 0;
-    border-width: 1px 1px 0 0;
+top: 0;
+right: 0;
+border-width: 1px 1px 0 0;
 }
 
 .decorated-zone::after {
-    bottom: 0;
-    left: 0;
-    border-width: 0 0 1px 1px;
+bottom: 0;
+left: 0;
+border-width: 0 0 1px 1px;
 }
 
 .header__rec {
-    position: absolute;
-    right: 18px;
-    top: 10px;
-    color: var(--accent-color);
-    z-index: 10;
-    justify-self: end;
+position: absolute;
+right: 18px;
+top: 10px;
+color: var(--accent-color);
+z-index: 10;
+justify-self: end;
 }
 
 .header__rec::after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    margin-left: 5px;
-    vertical-align: middle;
-    box-shadow: 0 0 6px 2px var(--accent-color);
+content: "";
+display: inline-block;
+width: 10px;
+height: 10px;
+background-color: var(--accent-color);
+border-radius: 50%;
+margin-left: 5px;
+vertical-align: middle;
+box-shadow: 0 0 6px 2px var(--accent-color);
 }
 
 
 
 .header__theme-menu {
-    justify-self: end;
-    margin-top: 70px;
-    min-height: 26px;
-    min-width: 70px;
+justify-self: end;
+margin-top: 70px;
+min-height: 26px;
+min-width: 70px;
 }
 
 .header__theme-menu-list {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    gap: 12px;
+display: flex;
+flex-direction: column;
+justify-self: center;
+gap: 12px;
 
 }
 
 
 .header__theme-menu-button {
-    font-size: 18px;
-    color: var(--button-color);
-    background: none;
-    border: none;
-    text-transform: lowercase;
+font-size: 18px;
+color: var(--button-color);
+background: none;
+border: none;
+text-transform: lowercase;
 }
 
 .header__theme-menu-button_active {
-    border: 1px solid var(--button-border-color);
-    pointer-events: none;
+border: 1px solid var(--button-border-color);
+pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-    border: var(--border-hover);
+border: var(--border-hover);
 }
 
 .header__theme-menu-button:focus {
-    outline: none;
-    border: none;
-    border-bottom: 1px solid var(--button-border-color);
-}
-
-.header__theme-menu-button_type_dark {
-    border: var(--border);
+outline: none;
+border: none;
+border-bottom: 1px solid var(--button-border-color);
 }
 
 .header__title {
-    justify-self: start;
-    align-self: start;
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    color: var(--title-color);
-    font-family: var(--main-font);
-    line-height: 0.83;
-    text-shadow: 4px 4px 0 var(--accent-color);
-    font-variant-ligatures: none;
+justify-self: start;
+align-self: start;
+font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+color: var(--title-color);
+font-family: var(--main-font);
+line-height: 0.83;
+text-shadow: 4px 4px 0 var(--accent-color);
+font-variant-ligatures: none;
 }
 
 .header__text {
-    display: inline-block;
-    align-self: center;
-    justify-content: center;
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    font-weight: 700;
-    margin-block-end: 10px;
-    padding-right: 20px;
-    line-height: 1.3;
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-    max-width: 355px;
+display: inline-block;
+align-self: center;
+justify-content: center;
+background-color: var(--accent-color);
+color: var(--text-color);
+font-weight: 700;
+margin-block-end: 10px;
+padding-right: 20px;
+line-height: 1.3;
+box-sizing: border-box;
+overflow-wrap: break-word;
+max-width: 355px;
 }
 
 .section {
-    margin: 0 auto;
-    display: grid;
-    gap: 54px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+margin: 0 auto;
+display: grid;
+gap: 50px;
+margin-top: 40px;
+margin-bottom: 40px;
 }
 
 .content-section,
 .gallery {
-    display: grid;
-    padding: 0 10px 0 10px;
-    gap: 19px;
-}
-
-.content-section {
-    gap: 19px;
+display: grid;
+padding: 0 10px 0 10px;
+gap: 20px;
 }
 
 .gallery {
-    gap: 0;
+gap: 0;
 }
 
+
 .section__title {
-    color: var(--h2-color);
-    font-weight: bold;
-    line-height: 1.3;
-    width: 355px;
-    font-size: var(--font-size);
+color: var(--h2-color);
+font-weight: bold;
+line-height: 1.3;
+width: 355px;
+font-size: var(--font-size);
 }
 
 .all_card {
-    display: grid;
-    gap: 22px;
+display: grid;
+gap: 22px;
 }
 
 .all_card_what {
-    display: grid;
-    gap: 20px;
+display: grid;
+gap: 21px;
 }
 
 .card {
-    margin: 0 auto;
-    display: grid;
-    gap: 11px;
+margin: 0 auto;
+display: grid;
+gap: 11px;
 }
 
 .title__text {
-    color: var(--text-color);
-    background-color: var(--accent-color);
-    font-weight: 700;
-    font-size: var(--font-size);
+color: var(--text-color);
+background-color: var(--accent-color);
+font-weight: 700;
+font-size: var(--font-size);
+line-height: 1.3;
+}
+
+.advice__title {
+    width: 100%;
+    justify-self: start;
 }
 
 .advice {
-    font-weight: 400;
+font-weight: 400;
+line-height: 1.3;
 }
 
 .text {
-    color: var(--text-content-color);
+color: var(--text-content-color);
 }
 
 
 
 
 a {
-    text-shadow: 1px 1px 0 var(--accent-color);
-    text-decoration: none;
+text-shadow: 1px 1px 0 var(--accent-color);
+text-decoration: none;
 }
 
 a:hover {
-    border-bottom: 1px solid var(--accent-color);
+border-bottom: 1px solid var(--text-content-color);
 }
 
 a:focus {
-    outline: 1px solid var(--text-color);
+outline: 1px solid var(--text-content-color);
 }
-
-
 
 
 .gallery__menu {
-    display: grid;
-    grid-column: auto;
-    gap: 10px;
-    margin-top: 10px;
+display: grid;
+grid-column: auto;
+gap: 10px;
+margin-top: 10px;
 }
 
 .gallery__item {
-    margin: 0;
+margin: 0;
 }
 
 .gallery__image {
-    max-width: 100%;
-    height: auto;
-    display: block;
+max-width: 100%;
+height: auto;
+display: block;
 }
 
 .footer {
-    height: 100vh;
-    min-block-size: 668px;
-    margin: 0 auto;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+height: 100vh;
+min-block-size: 668px;
+margin: 0 auto;
+margin-top: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
 
 .footer__title {
-    color: var(--title-color);
-    font-family: var(--main-font);
-    font-weight: 700;
-    font-size: clamp(116px, 5.8vw, 157px);
-    text-shadow: 4px 4px 0 var(--accent-color);
+color: var(--title-color);
+font-family: var(--main-font);
+font-weight: 700;
+font-size: 6.7em;
+text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .header {
-        padding: 0;
-        padding-right: 20px;
-    }
+.header {
+padding: 0;
+padding-right: 20px;
+}
 
-    .decorated-zone::before,
-    .decorated-zone::after {
-        content: "";
-        margin: 20px;
-    }
+.decorated-zone::before,
+.decorated-zone::after {
+content: "";
+margin: 20px;
+}
 
-    .header__rec {
-        right: 28px;
-        top: 20px;
-    }
+.header__rec {
+right: 28px;
+top: 20px;
+}
 
-    .header__top {
-        display: flex;
-    }
+.header__top {
+display: flex;
+}
 
-    .header__theme-menu {
-        margin: 0;
-        transform: translateY(192px);
-    }
+.header__theme-menu {
+margin: 0;
+transform: translateY(192px);
+}
 
-    .header__text {
-        justify-self: end;
-    }
+.header__text {
+justify-self: end;
+}
 
-    .section {
-        margin-top: 60px;
-        margin-bottom: 60px;
-        gap: 85px;
-    }
+.section {
+margin-top: 60px;
+margin-bottom: 60px;
+gap: 80px;
+}
 
-    .content-section,
-    .gallery {
-        padding: 0;
-        margin: 0 20px 0 20px;
-    }
+.content-section,
+.gallery {
+padding: 0;
+margin: 0 20px 0 20px;
+}
 
-    .content-section {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: 32% minmax(min-content, 472px);
+.content-section {
+display: grid;
+gap: 20px;
+grid-template-columns: 32% minmax(min-content, 472px);
 
-    }
+}
 
-        .content-section-what {
-        display: flex;
-        flex-direction: column;
-    }
+.content-section-what {
+display: flex;
+flex-direction: column;
+}
 
-    .section__title {
-        width: 236px;
-    }
+.section__title {
+width: 236px;
+}
 
-    .title__text {
-        line-height: 23px;
-        width: 100%;
-    }
+.title__text {
+line-height: 23px;
+width: 100%;
+}
 
-    .all_card {
-        width: 100%;
-        gap: 22px;
-    }
-
-
-    .all_card_what {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-
-    }
+.all_card {
+width: 100%;
+gap: 22px;
+}
 
 
-    .gallery {
-        gap: 18px;
-    }
+.all_card_what {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
 
-    .gallery__menu {
-        display: grid;
-        gap: 8px;
 
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "sunset sunset ice-cream"
-            "tape   books   ice-cream"
-            "tape   street  street";
-        padding: 0;
-    }
+.gallery {
+gap: 10px;
+}
 
-    .gallery__menu .gallery__item:nth-child(1) {
-        grid-area: sunset;
-    }
+.gallery__menu {
+display: grid;
+gap: 20px;
 
-    .gallery__menu .gallery__item:nth-child(2) {
-        grid-area: ice-cream;
-    }
+grid-template-columns: repeat(3, 1fr);
+grid-template-areas:
+"sunset sunset ice-cream"
+"tape books ice-cream"
+"tape street street";
+padding: 0;
+}
 
-    .gallery__menu .gallery__item:nth-child(3) {
-        grid-area: tape;
-    }
+.gallery__menu .gallery__item:nth-child(1) {
+grid-area: sunset;
+}
 
-    .gallery__menu .gallery__item:nth-child(4) {
-        grid-area: books;
-    }
+.gallery__menu .gallery__item:nth-child(2) {
+grid-area: ice-cream;
+}
 
-    .gallery__menu .gallery__item:nth-child(5) {
-        grid-area: street;
-    }
+.gallery__menu .gallery__item:nth-child(3) {
+grid-area: tape;
+}
 
-    .gallery__image {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.gallery__menu .gallery__item:nth-child(4) {
+grid-area: books;
+}
 
-    .footer {
-        height: 100vh;
-        min-height: 1024px;
-    }
+.gallery__menu .gallery__item:nth-child(5) {
+grid-area: street;
+}
+
+.gallery__image {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.footer {
+height: 100vh;
+min-height: 1024px;
+}
 }
 
 @media (min-width: 1024px) {
-    .header {
-        max-width: 1024px;
-        height: 100vh;
-        padding: 20px 20px 20px 0;
-    }
+.header {
+max-width: 1024px;
+height: 100vh;
+padding: 20px 20px 20px 0;
+}
 
-    .decorated-zone::before,
-    .decorated-zone::after {
-        margin: 20px;
-    }
+.decorated-zone::before,
+.decorated-zone::after {
+margin: 20px;
+}
 
-    .header__rec {
-        right: 28px;
-        top: 20px;
-    }
+.header__rec {
+right: 28px;
+top: 20px;
+}
 
-    .header__theme-menu {
-        justify-self: center;
-        margin: 0;
-        
-    }
+.header__theme-menu {
+justify-self: center;
+margin: 0;
 
-    .header__theme-menu-list {
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-        padding-left: 5px;
-    }
+}
 
-    .header__title {
-        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    }
+.header__theme-menu-list {
+display: flex;
+flex-direction: row;
+gap: 25px;
+padding-left: 5px;
+}
 
-    .header__text {
-        justify-self: end;
-        min-width: 50%;
-        padding: 0;
-    }
+.header__title {
+font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
 
-    .section {
-        max-width: 1024px;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        gap: 80px;
-    }
+.header__text {
+justify-self: end;
+min-width: 50%;
+padding: 0;
+}
 
-    .content-section,
-    .gallery {
-        padding: 0;
-        margin: 0 20px 0 20px;
-    }
+.section {
+max-width: 1024px;
+margin-top: 60px;
+margin-bottom: 60px;
+gap: 80px;
+}
 
-    .content-section {
-        grid-template-columns: 31% minmax(min-content, 648px);
-        max-width: 1024px;
-        gap: 27px;
-    }
+.content-section,
+.gallery {
+padding: 0;
+margin: 0 20px 0 20px;
+}
 
-    .content-section-what {
-        display: flex;
-        flex-direction: column;
+.content-section {
+grid-template-columns: 31% minmax(min-content, 648px);
+max-width: 1024px;
+gap: 27px;
+}
 
-    }
+.content-section-what {
+display: flex;
+flex-direction: column;
 
-
-    .text {
-        align-self: start;
-        margin-top: 10px;
-    }
-
-
-    .section__title {
-        max-width: 315px;
-    }
-
-
-    .all_card {
-        align-self: start;
-        display: grid;
-        gap: 20px;
-    }
-
-    .all_card_what {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;        
-    }
-
-    .card {
-        display: block;
-        max-width: 100%;
-        gap: 7px;
-    }
-
-    .title__text {
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .gallery {
-        max-width: 1024px;
-        gap: 15px;
-    }
-
-    .gallery__menu {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "sunset sunset ice-cream"
-            "tape   books   ice-cream"
-            "tape   street  street";
-        padding: 0;
-    }
-
-    .gallery__menu .gallery__item:nth-child(1) {
-        grid-area: sunset;
-    }
-
-    .gallery__menu .gallery__item:nth-child(2) {
-        grid-area: ice-cream;
-    }
-
-    .gallery__menu .gallery__item:nth-child(3) {
-        grid-area: tape;
-    }
-
-    .gallery__menu .gallery__item:nth-child(4) {
-        grid-area: books;
-    }
-
-    .gallery__menu .gallery__item:nth-child(5) {
-        grid-area: street;
-    }
-
-    .gallery__image {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .footer {
-        max-width: 1024px;
-        height: 100vh;
-        min-height: 768px;
-        margin-top: 60px;
-    }
-
-    .footer__title {
-        font-size: 9em;
-    }
 }
 
 
-
-@media (prefers-color-scheme: light) {
-    .theme-auto .header__rec {
-        display: none;
-    }
+.text {
+align-self: start;
+margin-top: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-    .theme-auto .header__rec {
-        display: block;
-    }
+
+.section__title {
+max-width: 315px;
+}
+
+
+.all_card {
+align-self: start;
+display: grid;
+gap: 20px;
+}
+
+.all_card_what {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.card {
+display: block;
+max-width: 100%;
+gap: 7px;
+}
+
+.title__text {
+max-width: 100%;
+margin: 0;
+}
+
+.gallery {
+max-width: 1024px;
+gap: 15px;
+}
+
+.gallery__menu {
+display: grid;
+gap: 20px;
+grid-template-columns: repeat(3, 1fr);
+grid-template-areas:
+"sunset sunset ice-cream"
+"tape books ice-cream"
+"tape street street";
+padding: 0;
+}
+
+.gallery__menu .gallery__item:nth-child(1) {
+grid-area: sunset;
+}
+
+.gallery__menu .gallery__item:nth-child(2) {
+grid-area: ice-cream;
+}
+
+.gallery__menu .gallery__item:nth-child(3) {
+grid-area: tape;
+}
+
+.gallery__menu .gallery__item:nth-child(4) {
+grid-area: books;
+}
+
+.gallery__menu .gallery__item:nth-child(5) {
+grid-area: street;
+}
+
+.gallery__image {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.footer {
+max-width: 1024px;
+height: 100vh;
+min-height: 768px;
+margin-top: 60px;
+}
+
+.footer__title {
+font-size: 9em;
+}
 }

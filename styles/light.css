@@ -30,7 +30,7 @@
         --border-hover: 1px solid rgba(53, 52, 48, 0.5);
     }
 
-    .theme-auto .header__rec {
+    .theme-light .header__rec {
         display: none;
     }
     }
